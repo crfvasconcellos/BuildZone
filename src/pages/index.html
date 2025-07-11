@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poetsen+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
-    <title>BuildZone</title>
+    <title>NLW Agents</title>
+    <link rel="stylesheet" href="../../src/styles/style.css" />
 </head>
-<body>
 
+<body>
     <header>
-        <img src="../../assets/ChatGPT Image 7 de jul. de 2025, 20_55_15.png" alt="Logo do BuildZone" draggable="false">
+        <img src="../../assets/ChatGPT Image 7 de jul. de 2025, 20_55_15.png" alt="Logo sports Build Zone">
     </header>
 
     <main>
         <section>
             <div>
-                <h2>Assistente de Meta</h2>
-                <p>Pergunte sobre estratégias, builds e dicas para seus Jogos!</p>
-                
-                <form id="form" action="">
-                        <input type="password"  id="apiKey" placeholder="Informe a API KEY do Gemini" required>
-                        <select name="" id="gameselect" required>
-                            <option value="">Selecione Um Jogos</option>
-                            <option value="valorant">Valorant</option>
-                            <option value="lol">League of Legends</option>
-                            <option value="CS">CS:GO</option>
-                            <option value="dbd">Dead By Daylight</option>
+                <h2 class="title">Assistente de Meta</h2>
+                <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
 
-                        </select>
+                <form id="form">
+                    <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini" required>
 
-                        <input id="questioninput" type="text" placeholder="Ex: melhor build para ADC..." required>
-                        
-                        <button id="askbutton">Perguntar</button>
+                    <select id="gameSelect">
+                        <option value="">Selecione um jogo</option>
+                        <option value="valorant">Valorant</option>
+                        <option value="lol">League of Legends</option>
+                        <option value="cs">CS:GO</option>
+                    </select>
+
+                    <input id="questionInput" type="text" placeholder="Ex: Melhor build para ADC..." required>
+                    <button id="askButton">Perguntar</button>
                 </form>
 
+                <div id="aiResponse" class="hidden">
+                    <div class="response-content">
 
-                <div id="aiResponse">
-                    <div class="response-content"></div>
+                    </div>
                 </div>
-
-
             </div>
         </section>
     </main>
-
-
-
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
     <script src="../script/script.js"></script>
 </body>
 </html>
